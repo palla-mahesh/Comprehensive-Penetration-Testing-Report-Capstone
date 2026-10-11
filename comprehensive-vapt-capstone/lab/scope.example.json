@@ -1,0 +1,17 @@
+{
+  "project_name": "Local Authorized Training Lab",
+  "authorization_reference": "REPLACE_WITH_APPROVAL_ID",
+  "scope": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "excluded_targets": [
+    "all public IPs",
+    "third-party systems",
+    "production systems unless explicitly authorized"
+  ],
+  "testing_window": "REPLACE_WITH_APPROVED_WINDOW_AND_TIMEZONE",
+  "rate_limit_requests_per_second": 1,
+  "emergency_contact": "REPLACE_WITH_LAB_OWNER",
+  "notes": "Example scope only. Do not treat this file as authorization."
+}

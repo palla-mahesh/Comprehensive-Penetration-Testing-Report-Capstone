@@ -1,0 +1,4 @@
+evidence_id,finding_id,filename,collection_time_timezone,collector,sha256,handling_notes
+EV-001,VAPT-001,example-response-headers.txt,YYYY-MM-DD HH:MM UTC,Analyst,REPLACE_WITH_SHA256,Illustrative placeholder; replace with sanitized authorized evidence
+EV-002,VAPT-002,auth-throttle-test-notes.md,YYYY-MM-DD HH:MM UTC,Analyst,REPLACE_WITH_SHA256,Use test accounts only and stay within approved request limits
+EV-003,VAPT-003,api-error-redacted.txt,YYYY-MM-DD HH:MM UTC,Analyst,REPLACE_WITH_SHA256,Remove tokens, personal data, hostnames, and secrets before sharing

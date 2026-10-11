@@ -1,0 +1,4 @@
+id,title,asset,category,owasp,severity,cvss_score,status,owner,target_date
+VAPT-001,Missing security headers,https://app.example.test (placeholder),Security Misconfiguration,A05:2021 – Security Misconfiguration,Medium,5.3,Open,Application Team,T+14 days
+VAPT-002,Insufficient login throttling,https://app.example.test/login (placeholder),Identification and Authentication Failures,A07:2021 – Identification and Authentication Failures,High,7.1,Open,Identity Team,T+7 days
+VAPT-003,Verbose error responses,https://app.example.test/api (placeholder),Security Misconfiguration,A05:2021 – Security Misconfiguration,Low,3.1,Open,Backend Team,T+30 days

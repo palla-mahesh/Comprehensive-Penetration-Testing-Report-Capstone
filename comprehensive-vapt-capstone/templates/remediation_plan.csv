@@ -1,0 +1,4 @@
+finding_id,severity,action,owner,target_date,status,retest_evidence,accepted_risk_approver,accepted_risk_expiry
+VAPT-002,High,Implement and validate login throttling,Identity Team,T+7 days,Open,,,,
+VAPT-001,Medium,Deploy reviewed security headers,Application Team,T+14 days,Open,,,,
+VAPT-003,Low,Sanitize production API errors,Backend Team,T+30 days,Open,,,,

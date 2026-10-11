@@ -1,0 +1,85 @@
+[
+  {
+    "id": "VAPT-001",
+    "title": "Missing security headers",
+    "asset": "https://app.example.test (placeholder)",
+    "category": "Security Misconfiguration",
+    "owasp": "A05:2021 \u2013 Security Misconfiguration",
+    "severity": "Medium",
+    "cvss_version": "3.1",
+    "cvss_score": 5.3,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+    "status": "Open",
+    "owner": "Application Team",
+    "target_date": "T+14 days",
+    "summary": "The illustrative response profile does not consistently define browser security headers.",
+    "evidence": "Example-only observation; replace with sanitized response headers collected during an authorized test.",
+    "impact": "Weak browser-side controls can increase exposure to content injection and clickjacking when combined with other weaknesses.",
+    "remediation": [
+      "Set a suitable Content-Security-Policy based on application requirements.",
+      "Set X-Content-Type-Options: nosniff.",
+      "Set an appropriate frame-ancestors directive or X-Frame-Options where needed.",
+      "Set Referrer-Policy and review permissions policy.",
+      "Test changes in staging and monitor for compatibility."
+    ],
+    "references": [
+      "OWASP Secure Headers Project",
+      "OWASP Top 10 2021 A05"
+    ]
+  },
+  {
+    "id": "VAPT-002",
+    "title": "Insufficient login throttling",
+    "asset": "https://app.example.test/login (placeholder)",
+    "category": "Identification and Authentication Failures",
+    "owasp": "A07:2021 \u2013 Identification and Authentication Failures",
+    "severity": "High",
+    "cvss_version": "3.1",
+    "cvss_score": 7.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "status": "Open",
+    "owner": "Identity Team",
+    "target_date": "T+7 days",
+    "summary": "The illustrative design lacks clear evidence of effective rate limiting and abuse detection for repeated failed authentication attempts.",
+    "evidence": "Example-only design review item; validate in a controlled test account and approved window. Do not conduct password spraying.",
+    "impact": "Could facilitate account compromise attempts and increase support burden if compensating controls are absent.",
+    "remediation": [
+      "Apply per-account and per-source adaptive throttling with safe thresholds.",
+      "Use MFA for privileged and risk-sensitive actions.",
+      "Return generic authentication errors to reduce account enumeration.",
+      "Alert on unusual failure patterns and test lockout recovery to prevent denial of service.",
+      "Document rate limits and verify them with a small, authorized test."
+    ],
+    "references": [
+      "OWASP Authentication Cheat Sheet",
+      "OWASP Top 10 2021 A07"
+    ]
+  },
+  {
+    "id": "VAPT-003",
+    "title": "Verbose error responses",
+    "asset": "https://app.example.test/api (placeholder)",
+    "category": "Security Misconfiguration",
+    "owasp": "A05:2021 \u2013 Security Misconfiguration",
+    "severity": "Low",
+    "cvss_version": "3.1",
+    "cvss_score": 3.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "status": "Open",
+    "owner": "Backend Team",
+    "target_date": "T+30 days",
+    "summary": "The illustrative API error response may expose implementation details beyond what clients need.",
+    "evidence": "Example-only response sample; replace with sanitized evidence from the authorized environment.",
+    "impact": "Stack traces or internal identifiers can help an attacker prioritize follow-on attempts, though the impact depends on the information exposed.",
+    "remediation": [
+      "Return stable, generic client-facing error messages.",
+      "Log diagnostic detail only on the server with access controls.",
+      "Use correlation IDs to connect client errors with internal logs.",
+      "Add tests ensuring production responses omit stack traces and secrets."
+    ],
+    "references": [
+      "OWASP Error Handling Cheat Sheet",
+      "OWASP Top 10 2021 A05"
+    ]
+  }
+]
